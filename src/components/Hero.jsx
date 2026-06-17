@@ -270,7 +270,7 @@ const Hero = () => {
                 Trusted by
               </span>
               <div className="flex gap-3 sm:gap-5 flex-wrap">
-                {["Kumarsoft", "Solario Tech", "CodeHelp"].map((company, index) => (
+                {["Kumarsoft", "SolarioTech", "CodeHelp"].map((company, index) => (
                   <span
                     key={index}
                     className="text-xs sm:text-sm font-medium text-gray-500 hover:text-gray-300 transition-colors tracking-wide"
