@@ -11,14 +11,28 @@ function App() {
   return (
     <>
       <Sidebar />
-      <div className="ml-20">
-        <Hero id="home" />
-        <About id="about"/>
-        <Services id="services"/>
-        <Timeline id="timeline"/>
-        <Projects id="projects"/>
-        <Testimonials id="testimonials"/>
-        <Contact id="contact"/>
+      <div className="lg:ml-20 ml-0">
+        <section id="home">
+          <Hero />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="services">
+          <Services />
+        </section>
+        <section id="timeline">
+          <Timeline />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="testimonials">
+          <Testimonials />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
       </div>
     </>
   );
