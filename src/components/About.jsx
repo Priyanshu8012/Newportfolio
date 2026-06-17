@@ -129,7 +129,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen bg-black py-24 px-4 md:px-10 relative overflow-hidden"
+      className="min-h-screen bg-black py-24 px-2 md:px-10 relative overflow-hidden"
       style={{
         backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.08) 1px, transparent 0)`,
         backgroundSize: '40px 40px'
@@ -170,7 +170,7 @@ const About = () => {
             className="relative group"
           >
             {/* Social Icons Floating */}
-            <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-20">
+            <div className="absolute -left-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-4 z-20 hidden md:flex">
               {[
                 { Icon: FaLinkedin, href: "https://linkedin.com", color: "hover:bg-blue-600", label: "LinkedIn" },
                 { Icon: FaGithub, href: "https://github.com", color: "hover:bg-gray-700", label: "GitHub" },
@@ -241,7 +241,7 @@ const About = () => {
           viewport={{ once: true }}
           className="mt-20 relative"
         >
-          <div className="absolute -left-4 top-0 text-6xl text-indigo-500/20">"</div>
+          <div className="absolute -left-2 top-0 text-6xl text-indigo-500/20 md:-left-4">"</div>
           <div className="bg-black/40 backdrop-blur-xl rounded-2xl p-8 border border-white/10 shadow-2xl shadow-black/50">
             <p className="text-white/80 text-lg leading-relaxed">
               Hi, I'm <span className="font-bold text-indigo-400">Priyanshu Kumar</span>, a passionate Full Stack

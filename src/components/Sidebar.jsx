@@ -26,7 +26,7 @@ const Sidebar = () => {
   useEffect(() => {
     const handleScroll = () => {
       const sections = navItems.map(item => document.getElementById(item.id));
-      const scrollPosition = window.scrollY + 100;
+      const scrollPosition = window.scrollY + 150;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
@@ -61,11 +61,10 @@ const Sidebar = () => {
       {/* Desktop Sidebar - Premium Dark 3D Design */}
       <div
         className="
-          fixed left-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex
-          flex-col gap-4
+          fixed left-4 xl:left-6 top-1/2 -translate-y-1/2 z-50
+          hidden lg:flex flex-col gap-3 xl:gap-4
         "
       >
-        {/* 3D Perspective Container */}
         <div className="relative p-2 bg-white/5 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl shadow-black/50">
           <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-3xl pointer-events-none" />
           
@@ -85,7 +84,6 @@ const Sidebar = () => {
                   transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
                 }}
               >
-                {/* 3D Glow Effect */}
                 <div
                   className={`
                     absolute inset-0 rounded-full transition-all duration-500
@@ -96,11 +94,10 @@ const Sidebar = () => {
                   `}
                 />
 
-                {/* Button with 3D depth */}
                 <button
                   onClick={() => scrollToSection(item.id)}
                   className={`
-                    relative w-12 h-12 rounded-full
+                    relative w-11 h-11 xl:w-12 xl:h-12 rounded-full
                     flex items-center justify-center
                     transition-all duration-300
                     ${isActive 
@@ -119,14 +116,13 @@ const Sidebar = () => {
                     transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease'
                   }}
                 >
-                  <Icon className={`text-xl transition-all ${isActive ? "scale-110" : ""}`} />
+                  <Icon className={`text-lg xl:text-xl transition-all ${isActive ? "scale-110" : ""}`} />
                 </button>
 
-                {/* 3D Tooltip */}
                 <div
                   className={`
-                    absolute left-16 top-1/2 -translate-y-1/2
-                    px-4 py-2 bg-black/90 backdrop-blur-xl text-white text-sm font-medium
+                    absolute left-14 xl:left-16 top-1/2 -translate-y-1/2
+                    px-3 xl:px-4 py-1.5 xl:py-2 bg-black/90 backdrop-blur-xl text-white text-xs xl:text-sm font-medium
                     rounded-xl whitespace-nowrap
                     transition-all duration-300
                     ${isHovered || isActive
@@ -147,26 +143,23 @@ const Sidebar = () => {
                   </div>
                 </div>
 
-                {/* Active Indicator Line with 3D effect */}
                 {isActive && (
-                  <div className="absolute -left-3 top-1/2 -translate-y-1/2 w-1 h-8 bg-gradient-to-b from-indigo-400 to-purple-400 rounded-full shadow-lg shadow-indigo-500/50 animate-pulse" />
+                  <div className="absolute -left-2 xl:-left-3 top-1/2 -translate-y-1/2 w-0.5 xl:w-1 h-6 xl:h-8 bg-gradient-to-b from-indigo-400 to-purple-400 rounded-full shadow-lg shadow-indigo-500/50 animate-pulse" />
                 )}
               </div>
             );
           })}
 
-          {/* Social Links Separator with 3D depth */}
-          <div className="my-4 px-3">
-            <div className="w-10 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+          <div className="my-3 xl:my-4 px-3">
+            <div className="w-8 xl:w-10 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
           </div>
 
-          {/* Social Media Icons with 3D effect */}
-          <div className="flex flex-col gap-4">
+          <div className="flex flex-col gap-3 xl:gap-4">
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/priyanshu-kumar-2a4471246/"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative w-12 h-12 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 overflow-hidden"
+              className="group relative w-11 h-11 xl:w-12 xl:h-12 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 overflow-hidden"
               style={{
                 transform: hoveredItem === 'linkedin' ? 'translateZ(15px) scale(1.1)' : 'translateZ(0px) scale(1)',
                 transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
@@ -175,13 +168,13 @@ const Sidebar = () => {
               onMouseLeave={() => setHoveredItem(null)}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <FaLinkedin className="text-xl relative z-10" />
+              <FaLinkedin className="text-lg xl:text-xl relative z-10" />
             </a>
             <a
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="group relative w-12 h-12 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 overflow-hidden"
+              className="group relative w-11 h-11 xl:w-12 xl:h-12 rounded-full bg-black/40 backdrop-blur-sm border border-white/10 flex items-center justify-center text-gray-400 hover:text-white transition-all duration-300 overflow-hidden"
               style={{
                 transform: hoveredItem === 'github' ? 'translateZ(15px) scale(1.1)' : 'translateZ(0px) scale(1)',
                 transition: 'transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)',
@@ -190,56 +183,9 @@ const Sidebar = () => {
               onMouseLeave={() => setHoveredItem(null)}
             >
               <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <FaGithub className="text-xl relative z-10" />
+              <FaGithub className="text-lg xl:text-xl relative z-10" />
             </a>
           </div>
-        </div>
-      </div>
-
-      {/* Mobile Navigation - Dark 3D Bottom Bar */}
-      <div
-        className="
-          fixed bottom-0 left-0 right-0 z-50 lg:hidden
-          bg-black/90 backdrop-blur-2xl border-t border-white/10
-          shadow-2xl shadow-black/50
-        "
-      >
-        <div className="flex justify-around items-center px-2 py-2">
-          {navItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = activeSection === item.id;
-
-            return (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`
-                  relative flex flex-col items-center gap-0.5
-                  py-1.5 px-2 rounded-xl transition-all duration-300
-                  ${isActive 
-                    ? "text-indigo-400" 
-                    : "text-gray-500 hover:text-gray-300"
-                  }
-                `}
-                style={{
-                  transform: isActive ? 'translateY(-2px)' : 'translateY(0px)',
-                }}
-              >
-                <div className="relative">
-                  <Icon className={`text-xl ${isActive ? "scale-110" : ""} transition-transform duration-300`} />
-                  {isActive && (
-                    <div className="absolute -inset-1 bg-indigo-500/20 rounded-full blur-sm -z-10" />
-                  )}
-                </div>
-                <span className={`text-[10px] transition-all duration-300 ${isActive ? "opacity-100 text-indigo-400" : "opacity-60"}`}>
-                  {item.label}
-                </span>
-                {isActive && (
-                  <div className="absolute -top-2 w-8 h-0.5 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full shadow-lg shadow-indigo-500/50" />
-                )}
-              </button>
-            );
-          })}
         </div>
       </div>
     </>
