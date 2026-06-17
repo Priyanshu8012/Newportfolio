@@ -101,9 +101,9 @@ const Hero = () => {
 
   // Stats data
   const stats = [
-    { value: "50+", label: "Projects Completed" },
-    { value: "30+", label: "Happy Clients" },
-    { value: "5+", label: "Years Experience" },
+    { value: "30+",label: "Projects Completed" },
+    { value: "15+", label: "Happy Clients" },
+    { value: "3+", label: "Years Experience" },
   ];
 
   const features = [
