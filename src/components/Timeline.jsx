@@ -15,7 +15,7 @@ import { useEffect, useRef, useState } from "react";
 const timelineData = [
   {
     title: "Backend Developer",
-    company: "Mohali, Punjab",
+    company: "SolarioTech,Mohali",
     date: "2025 - Present",
     icon: <Code size={24} />,
     side: "left",
